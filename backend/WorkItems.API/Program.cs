@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using WorkItem.Api.Endpoint;
+using WorkItems.Api.Endpoint;
 using WorkItems.API.Data;
 using WorkItems.API.Models;
 
