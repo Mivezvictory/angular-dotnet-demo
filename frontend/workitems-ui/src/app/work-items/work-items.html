@@ -1,0 +1,45 @@
+<div class="page">
+  <h1>Work Items</h1>
+
+  <div class="card">
+    <h2>Add a Work Item</h2>
+
+    <div class="row">
+      <input
+        type="text"
+        [formControl]="title"
+        placeholder="e.g., Review deployment logs"
+        (keyup.enter)="add()"
+      />
+      <button (click)="add()" [disabled]="title.invalid">Add</button>
+    </div>
+
+    <p class="hint" *ngIf="title.touched && title.invalid">
+      Title must be at least 2 characters.
+    </p>
+
+    <p class="error" *ngIf="error">{{ error }}</p>
+  </div>
+
+  <div class="card">
+    <h2>Items</h2>
+
+    <p *ngIf="loading">Loading…</p>
+    <p *ngIf="!loading && items.length === 0">No items yet.</p>
+
+    <ul class="list" *ngIf="!loading && items.length > 0">
+      <li class="item" *ngFor="let item of items">
+        <div class="meta">
+          <div class="title">{{ item.title }}</div>
+          <div class="sub">Created: {{ item.createdAtUtc | date:'medium' }}</div>
+        </div>
+
+        <select [value]="item.status" (change)="setStatus(item, $any($event.target).value)">
+          <option *ngFor="let s of statuses" [value]="s">{{ s }}</option>
+        </select>
+
+        <button class="danger" (click)="remove(item)">Delete</button>
+      </li>
+    </ul>
+  </div>
+</div>
