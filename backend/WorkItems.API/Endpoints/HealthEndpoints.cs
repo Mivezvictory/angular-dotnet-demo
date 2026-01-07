@@ -1,4 +1,4 @@
-namespace WorkItem.Api.Endpoint;
+namespace WorkItems.Api.Endpoint;
 
 public static class HealthEndpoints
 {
