@@ -1,0 +1,60 @@
+
+# =========================
+# Global defaults
+# =========================
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# =========================
+# Markdown
+# =========================
+[*.md]
+trim_trailing_whitespace = false
+
+# =========================
+# JSON / YAML
+# =========================
+[*.json]
+indent_size = 2
+
+[*.yml]
+indent_size = 2
+
+[*.yaml]
+indent_size = 2
+
+# =========================
+# TypeScript / JavaScript
+# =========================
+[*.{ts,tsx,js,jsx}]
+indent_size = 2
+
+# =========================
+# HTML / CSS
+# =========================
+[*.html]
+indent_size = 2
+
+[*.css]
+indent_size = 2
+
+# =========================
+# C# / .NET
+# =========================
+[*.cs]
+indent_size = 4
+
+# Optional: keep using statements outside namespace (common modern style)
+dotnet_sort_system_directives_first = true
+
+# Keep file-scoped namespaces if you choose to use them
+csharp_style_namespace_declarations = file_scoped:suggestion
+
+# Expression-bodied members preferences (light-touch)
+csharp_style_expression_bodied_methods = when_on_single_line:suggestion
+csharp_style_expression_bodied_properties = when_on_single_line:suggestion

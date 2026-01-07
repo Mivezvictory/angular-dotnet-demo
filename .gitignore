@@ -1,0 +1,80 @@
+# =========================
+# OS / Editor
+# =========================
+.DS_Store
+Thumbs.db
+
+.vscode/
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+.idea/
+*.iml
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# =========================
+# .NET / C#
+# =========================
+**/bin/
+**/obj/
+*.dll
+*.pdb
+*.cache
+*.nupkg
+*.snupkg
+
+# Rider / ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# Local settings (if you ever add Azure Functions / local config)
+local.settings.json
+
+# Logs
+*.log
+
+# =========================
+# Database (SQLite)
+# =========================
+*.db
+*.db-shm
+*.db-wal
+
+# If you prefer only ignoring the demo DB file specifically, you can use:
+# backend/**/workitems.db
+
+# =========================
+# Node / Angular
+# =========================
+**/node_modules/
+**/dist/
+**/.angular/
+**/.cache/
+**/coverage/
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+
+# Angular environment files (if you add local overrides)
+**/src/environments/environment.local.ts
+
+# =========================
+# Env / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Build artifacts / misc
+# =========================
+*.tmp
+*.swp
