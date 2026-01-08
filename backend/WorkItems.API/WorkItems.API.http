@@ -1,6 +1,26 @@
-@WorkItems.API_HostAddress = http://localhost:5145
+@host = http://localhost:5145
 
-GET {{WorkItems.API_HostAddress}}/weatherforecast/
-Accept: application/json
+### Health
+GET {{host}}/health
 
-###
+### Get all work items
+GET {{host}}/api/work-items
+
+### Create work item
+POST {{host}}/api/work-items
+Content-Type: application/json
+
+{
+  "title": "Review deployment logs"
+}
+
+### Update status
+PUT {{host}}/api/work-items/1/status
+Content-Type: application/json
+
+{
+  "status": "InProgress"
+}
+
+### Delete
+DELETE {{host}}/api/work-items/1
