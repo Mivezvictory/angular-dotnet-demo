@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WorkItems.Api.Endpoint;
+using WorkItems.Api.Endpoints;
 using WorkItems.API.Data;
 using WorkItems.API.Models;
 
@@ -19,14 +20,14 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
 
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     db.Database.EnsureCreated();
 }
+//app.UseHttpsRedirection();
 
 app.MapHealthEndpoints();
-//app.MapWorkItemEndpoints();
+app.MapWorkItemEndpoints();
 app.Run();
