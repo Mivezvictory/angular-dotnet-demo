@@ -36,6 +36,7 @@ _ReSharper*/
 
 # Local settings (if you ever add Azure Functions / local config)
 local.settings.json
+**/Properties/launchSettings.json
 
 # Logs
 *.log
